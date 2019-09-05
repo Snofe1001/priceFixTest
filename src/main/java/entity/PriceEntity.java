@@ -108,6 +108,11 @@ public class PriceEntity {
 
     @Override
     public String toString() {
-        return String.valueOf(this.getNumber());
+        return "Product = " + this.getProductCode() +
+                "Depart = " + this.getDepart() +
+                "Number = " + this.getNumber() +
+                "Value = " + this.getValue() +
+                "Date begin = " + this.getBegin() +
+                "Date end = " + this.getEnd();
     }
 }

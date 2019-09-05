@@ -79,7 +79,8 @@ public class LogicClass {
                                         flagChangedPrice = true;
                                         break;
                                     }
-                                } else if (resultPriceByNumber.getBegin().before(newPriceByNumber.getBegin()) && resultPriceByNumber.getEnd().before(newPriceByNumber.getEnd())) {
+                                } else if (resultPriceByNumber.getBegin().before(newPriceByNumber.getBegin()) && resultPriceByNumber.getEnd().before(newPriceByNumber.getEnd())
+                                        && resultPriceByNumber.getEnd().after(newPriceByNumber.getBegin())) {
                                     if (!(resultPriceByNumber.getValue() == newPriceByNumber.getValue())) {
                                         PriceEntity newPrice1 = new PriceEntity(newPriceByNumber);
                                         PriceEntity newPrice2 = new PriceEntity(resultPriceByNumber);
@@ -94,7 +95,8 @@ public class LogicClass {
                                         flagChangedPrice = true;
                                         break;
                                     }
-                                } else if (resultPriceByNumber.getBegin().after(newPriceByNumber.getBegin()) && resultPriceByNumber.getEnd().after(newPriceByNumber.getEnd())) {
+                                } else if (resultPriceByNumber.getBegin().after(newPriceByNumber.getBegin()) && resultPriceByNumber.getEnd().after(newPriceByNumber.getEnd())
+                                        && resultPriceByNumber.getBegin().before(newPriceByNumber.getEnd())) {
                                     if (!(resultPriceByNumber.getValue() == newPriceByNumber.getValue())) {
                                         PriceEntity newPrice1 = new PriceEntity(newPriceByNumber);
                                         PriceEntity newPrice2 = new PriceEntity(resultPriceByNumber);
